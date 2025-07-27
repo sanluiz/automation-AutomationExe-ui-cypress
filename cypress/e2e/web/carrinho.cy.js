@@ -1,5 +1,5 @@
-import PaginaHome from '../../pages/PaginaHome';
-import PaginaCarrinho from '../../pages/PaginaCarrinho';
+import PageHome from '../../pages/PageHome';
+import PageCarrinho from '../../pages/PageCarrinho';
 
 describe('Fluxo de Carrinho', () => {
   beforeEach(() => {
@@ -9,9 +9,9 @@ describe('Fluxo de Carrinho', () => {
 
   it('Deve adicionar produto ao carrinho e validar', () => {
     const dados = Cypress.env('usuario');
-      PaginaHome.buscarProduto(dados.busca);
-      PaginaHome.adicionarPrimeiroProdutoAoCarrinho();
-      PaginaHome.irParaCarrinho();
-      PaginaCarrinho.validarProdutoNoCarrinho();
+      PageHome.buscarProduto(dados.busca);
+      PageHome.adicionarPrimeiroProdutoAoCarrinho();
+      PageHome.irParaCarrinho();
+      PageCarrinho.validarProdutoNoCarrinho();
   });
 });

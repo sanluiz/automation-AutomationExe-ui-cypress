@@ -1,4 +1,4 @@
-class PaginaLogin {
+class PageLogin {
   visitar() {
     cy.visit('/login');
   }
@@ -22,4 +22,4 @@ class PaginaLogin {
   }
 }
 
-export default new PaginaLogin();
+export default new PageLogin();

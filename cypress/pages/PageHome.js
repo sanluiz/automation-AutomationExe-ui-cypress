@@ -1,4 +1,4 @@
-class PaginaHome {
+class PageHome {
   buscarProduto(termo) {
     cy.get('.shop-menu > .nav > :nth-child(2) > a').click()
     cy.get('input[name="search"]').type(termo);
@@ -16,4 +16,4 @@ class PaginaHome {
   }
 }
 
-export default new PaginaHome();
+export default new PageHome();

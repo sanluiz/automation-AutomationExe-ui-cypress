@@ -1,4 +1,4 @@
-class PaginaCarrinho {
+class PageCarrinho {
   validarProdutoNoCarrinho() {
     cy.get('.cart_info .cart_description').should('exist');
   }
@@ -8,4 +8,4 @@ class PaginaCarrinho {
   }
 }
 
-export default new PaginaCarrinho();
+export default new PageCarrinho();

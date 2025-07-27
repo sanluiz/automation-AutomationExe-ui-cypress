@@ -1,4 +1,4 @@
-import PaginaHome from '../../pages/PaginaHome';
+import PageHome from '../../pages/PageHome';
 
 describe('Funcionalidade: Busca de Produto', () => {
   beforeEach(() => {
@@ -7,6 +7,6 @@ describe('Funcionalidade: Busca de Produto', () => {
 
   it('Deve buscar um produto pelo nome', () => {
     const dados = Cypress.env('usuario');
-      PaginaHome.buscarProduto(dados.busca);
+      PageHome.buscarProduto(dados.busca);
   });
 });

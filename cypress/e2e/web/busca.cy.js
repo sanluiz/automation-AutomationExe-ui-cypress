@@ -6,8 +6,7 @@ describe('Funcionalidade: Busca de Produto', () => {
   });
 
   it('Deve buscar um produto pelo nome', () => {
-    cy.fixture('usuario').then((dados) => {
+    const dados = Cypress.env('usuario');
       PaginaHome.buscarProduto(dados.busca);
-    });
   });
 });

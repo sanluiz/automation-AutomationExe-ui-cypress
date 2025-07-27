@@ -1,11 +1,1 @@
-{
-  "valido": {
-    "email": "test2025@auto.com",
-    "senha": "!teste2025@"
-  },
-  "invalido": {
-    "email": "email@invalido.com",
-    "senha": "senhaerrada"
-  },
-  "busca": "Tshirt"
-}
+{}

@@ -8,11 +8,10 @@ describe('Fluxo de Carrinho', () => {
   });
 
   it('Deve adicionar produto ao carrinho e validar', () => {
-    cy.fixture('usuario').then((dados) => {
+    const dados = Cypress.env('usuario');
       PaginaHome.buscarProduto(dados.busca);
       PaginaHome.adicionarPrimeiroProdutoAoCarrinho();
       PaginaHome.irParaCarrinho();
       PaginaCarrinho.validarProdutoNoCarrinho();
-    });
   });
 });

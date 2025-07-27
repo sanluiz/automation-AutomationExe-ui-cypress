@@ -6,24 +6,21 @@ describe('Funcionalidade: Login', () => {
   });
 
   it('Deve realizar login com sucesso', () => {
-    cy.fixture('usuario').then((dados) => {
-      PaginaLogin.fazerLogin(dados.valido.email, dados.valido.senha);
-      cy.contains('Logged in as').should('be.visible');
-    });
+    const dados = Cypress.env('usuario');
+    PaginaLogin.fazerLogin(dados.valido.email, dados.valido.senha);
+    cy.contains('Logged in as').should('be.visible');
   });
 
   it('Não deve logar com senha incorreta', () => {
-    cy.fixture('usuario').then((dados) => {
-      PaginaLogin.fazerLogin(dados.valido.email, dados.invalido.senha);
-      cy.contains('Your email or password is incorrect!').should('be.visible');
-    });
+    const dados = Cypress.env('usuario');
+    PaginaLogin.fazerLogin(dados.valido.email, dados.invalido.senha);
+    cy.contains('Your email or password is incorrect!').should('be.visible');
   });
 
   it('Não deve logar com email incorreto', () => {
-    cy.fixture('usuario').then((dados) => {
-      PaginaLogin.fazerLogin(dados.invalido.email, dados.valido.senha);
-      cy.contains('Your email or password is incorrect!').should('be.visible');
-    });
+    const dados = Cypress.env('usuario');
+    PaginaLogin.fazerLogin(dados.invalido.email, dados.valido.senha);
+    cy.contains('Your email or password is incorrect!').should('be.visible');
   });
 
   it('Neve validar campos obrigatórios', () => {
